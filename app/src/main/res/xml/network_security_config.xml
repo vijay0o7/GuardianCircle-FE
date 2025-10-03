@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow HTTP traffic for devtunnel during development -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">172.20.10.3</domain>
+        <trust-anchors>
+            <!-- Allow system-installed CAs -->
+            <certificates src="system" />
+            <!-- Allow user-installed CAs (for testing self-signed certs) -->
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

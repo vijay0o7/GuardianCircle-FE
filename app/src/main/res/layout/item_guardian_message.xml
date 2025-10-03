@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Message text -->
+    <TextView
+        android:id="@+id/tvGuardianMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_incoming"
+        android:padding="10dp"
+        android:text="Sample Message"
+        android:textSize="15sp"
+        android:textColor="@color/black" />
+
+    <!-- Time -->
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:30 PM"
+        android:textSize="12sp"
+        android:textColor="@color/font"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

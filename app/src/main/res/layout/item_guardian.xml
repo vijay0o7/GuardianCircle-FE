@@ -1,0 +1,87 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/guardian_card_background"
+    android:layout_marginBottom="10dp"
+    android:gravity="center_vertical"
+    android:padding="12dp">
+
+    <!-- (Optional) Profile icon or placeholder -->
+    <ImageView
+        android:id="@+id/guardianProfile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_person"
+        android:background="@drawable/circle_background"
+        android:layout_marginEnd="12dp"
+        android:scaleType="centerCrop"/>
+
+    <!-- Guardian info: name, email, phone, gender/relation -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/guardianName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardian Name"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/guardianEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="guardian@email.com"
+            android:textColor="#555"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/guardianPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91-1234567890"
+            android:textColor="#555"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/guardianRelation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textColor="#555"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Delete Button Row (icon + text) -->
+        <LinearLayout
+            android:id="@+id/deleteGuardianBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Delete Guardian"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textColor="#D32F2F"
+                android:layout_marginStart="6dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

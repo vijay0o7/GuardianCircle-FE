@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white"
+    tools:context="com.example.gaurdiancircle.Journey">
+
+    <LinearLayout
+        android:id="@+id/backk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header with back button and title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back_arrow"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Journey Timer"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- Live Map View -->
+        <org.osmdroid.views.MapView
+            android:id="@+id/liveMap"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/font" />
+
+        <!-- Current Location Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Location"
+            android:textColor="@color/font"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Current Location Display Box -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location"
+                app:tint="@color/theme_purple"
+                 />
+
+            <TextView
+                android:id="@+id/currentLocationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fetching location..."
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <!-- Destination Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination"
+            android:textColor="@color/font"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Destination Entry -->
+        <AutoCompleteTextView
+            android:id="@+id/destinationET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter your destination"
+            android:drawableStart="@drawable/ic_location"
+            android:drawableTint="@color/theme_purple"
+            android:drawablePadding="8dp"
+            android:padding="12dp"
+            android:background="@drawable/input_background"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            android:completionThreshold="1"
+            android:dropDownHeight="200dp"
+            android:inputType="textCapWords" />
+
+        <!-- Estimated Arrival Time Display -->
+
+
+        <!-- Start Journey Button -->
+        <Button
+            android:id="@+id/btn_start_journey"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Start Journey"
+            android:backgroundTint="@color/theme_purple"
+            android:textColor="@color/white"
+            android:layout_marginTop="80dp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Cancel and Arrived Buttons Side-by-Side -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Cancel"
+                android:backgroundTint="@color/theme_purple"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif-medium" />
+
+            <Button
+                android:id="@+id/btn_arrived"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Arrived Safely"
+                android:backgroundTint="@color/theme_purple"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

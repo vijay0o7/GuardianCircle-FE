@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_red_dark"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvRecordingStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOS ALERT"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp" />
+
+        <!-- SOS Icon -->
+        <ImageView
+            android:id="@+id/ivSosIcon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/sos"
+            android:contentDescription="Alert Icon" />
+
+        <!-- Location Row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_mylocation"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fetching location..."
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/timee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp" />
+
+        <!-- Buttons -->
+
+        <!-- Send to Guardians -->
+        <Button
+            android:id="@+id/btnSendToGuardians"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@android:color/white"
+            android:text="SEND TO GUARDIANS"
+            android:textColor="#D32F2F"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="12dp"
+            android:contentDescription="Send alert to guardians" />
+
+        <!-- Call Police -->
+        <Button
+            android:id="@+id/btnCallPolice"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/white"
+            android:text="CALL POLICE"
+            android:textColor="#D32F2F"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:contentDescription="Call Police" />
+
+        <!-- Stop -->
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="Stop SOS alert"
+            android:text="STOP"
+            android:textAllCaps="true"
+            android:textColor="#D32F2F"
+            android:textSize="18sp" />
+
+</LinearLayout>

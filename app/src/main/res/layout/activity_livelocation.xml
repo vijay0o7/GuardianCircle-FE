@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#F7F8FA"
+tools:context=".livelocation">
+
+<!-- Top App Bar Padding Area (status bar space) -->
+<View
+    android:id="@+id/statusBarSpacer"
+    android:layout_width="0dp"
+    android:layout_height="24dp"
+    app:layout_constrainedHeight="true"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+<!-- Title -->
+<TextView
+    android:id="@+id/tvTitle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:text="Live Location Sharing"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:textColor="#121212"
+    app:layout_constraintTop_toBottomOf="@id/statusBarSpacer"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+<!-- Status row: green dot + text -->
+<LinearLayout
+    android:id="@+id/llStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="24dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <!-- Using a green bullet for the dot -->
+    <TextView
+        android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u25CF"
+        android:textSize="14sp"
+        android:textColor="#25C55B"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Location sharing active"
+        android:textSize="18sp"
+        android:textColor="#3A3A3A"/>
+</LinearLayout>
+
+<!-- Map area -->
+<FrameLayout
+    android:id="@+id/mapContainer"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="16dp"
+    android:background="#E6ECF1"
+    app:layout_constraintTop_toBottomOf="@id/llStatus"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/bottomSheet">
+
+    <!-- Replace this with MapView/OSM/GoogleMap as needed -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapLive"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/backgrounds/scenic"/>
+
+    <!-- Current location pin -->
+    <TextView
+        android:id="@+id/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="\uD83D\uDCCD"
+        android:textSize="28sp"/>
+</FrameLayout>
+
+<!-- Bottom Sheet Card -->
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/bottomSheet"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="24dp"
+    app:cardUseCompatPadding="true"
+    app:strokeWidth="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_marginTop="12dp">
+
+        </HorizontalScrollView>
+
+        <!-- Info rows -->
+        <TextView
+            android:id="@+id/tvLastUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Last updated: Just now"
+            android:textSize="16sp"
+            android:textColor="#5F6368"/>
+
+        <TextView
+            android:id="@+id/tvEncrypted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Location data is encrypted and secure"
+            android:textSize="16sp"
+            android:textColor="#5F6368"/>
+
+        <!-- Stop button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStopLiveTracking"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="Stop Live Tracking"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            app:cornerRadius="28dp"
+            app:iconPadding="8dp"
+            app:backgroundTint="#FF4D4F"/>
+
+        <!-- Active duration label -->
+        <TextView
+            android:id="@+id/tvActiveFor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="Location sharing has been active for 2 hours"
+            android:textSize="14sp"
+            android:textColor="#8A8F95"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/img"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/img"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GaurdianCircle"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".GuardianSos"
+            android:exported="false" />
+        <activity
+            android:name=".suggestion_item"
+            android:exported="false" />
+        <activity
+            android:name=".outgoing_message_item"
+            android:exported="false" />
+        <activity
+            android:name=".activity_guardian_chat"
+            android:exported="false" />
+        <activity
+            android:name=".item_guardian_request"
+            android:exported="false" />
+        <activity
+            android:name=".Acceptguardian"
+            android:exported="false" />
+        <activity
+            android:name=".livelocation"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBWBZuw-_yQStO_h7yzlbPuCc5LC4swA7A" />
+
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Journey"
+            android:exported="false" />
+        <activity
+            android:name=".item_notification"
+            android:exported="false" />
+        <activity
+            android:name=".activity_notifications"
+            android:exported="false" />
+        <activity
+            android:name=".activity_journey_history"
+            android:exported="false" />
+        <activity
+            android:name=".item_journey"
+            android:exported="false" />
+        <activity
+            android:name=".item_guardian"
+            android:exported="false" />
+        <activity
+            android:name=".ActiveSOSActivity"
+            android:exported="false" />
+        <activity
+            android:name=".privacyscreen"
+            android:exported="false" />
+        <activity
+            android:name=".editprofile"
+            android:exported="false" />
+        <activity
+            android:name=".sosconfirm"
+            android:exported="false" />
+        <activity
+            android:name=".Permissions"
+            android:exported="false" />
+        <activity
+            android:name=".section_notifications"
+            android:exported="false" />
+        <activity
+            android:name=".section_safety_alert"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileSettings"
+            android:exported="false" />
+        <activity
+            android:name=".Guardiansmapview"
+            android:exported="false" />
+        <activity
+            android:name=".mapview"
+            android:exported="false" />
+        <activity
+            android:name=".ChatPage"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".guardianhome2"
+            android:exported="false" />
+        <activity
+            android:name=".startjourney"
+            android:exported="false" />
+        <activity
+            android:name=".Sosscreen"
+            android:exported="false" />
+        <activity
+            android:name=".Sossetting"
+            android:exported="false" />
+        <activity
+            android:name=".AddGuardian"
+            android:exported="false" />
+        <activity
+            android:name=".Myguardians"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".forgotpassword"
+            android:exported="false" />
+        <activity
+            android:name=".signup"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.signup"
+            android:exported="false"
+            android:label="@string/title_activity_signup" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".startup2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

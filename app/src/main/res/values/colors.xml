@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="theme_purple">#A78BFA</color>
+    <color name="theme_white">#F8F7FC</color>
+    <color name="font">#9CA3AF</color>
+    <color name="incoming_message">#F0EEFF</color>
+    <color name="outgoing_message">#E8F4FF</color>
+    <color name="light_white">#F8F8F8</color>
+    <color name="red">#FF0000</color>
+</resources>
